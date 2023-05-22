@@ -1,39 +1,33 @@
 radio.onReceivedNumber(function (receivedNumber) {
-    if (receivedNumber == 1) {
-        if (MIJUGADA == 1) {
-            basic.showString("EMPATE")
-            basic.clearScreen()
-        } else if (MIJUGADA == 2) {
-            basic.showString("PERDISTE")
-            basic.clearScreen()
-        } else {
-            basic.showString("GANASTE")
-            basic.clearScreen()
-        }
-    }
     if (receivedNumber == 2) {
         if (MIJUGADA == 2) {
             basic.showString("EMPATE")
-            basic.clearScreen()
         } else if (MIJUGADA == 1) {
+            basic.showString("PERDISTE")
+        } else {
             basic.showString("GANASTE")
-            basic.clearScreen()
+        }
+        basic.clearScreen()
+    }
+    if (receivedNumber == 1) {
+        if (MIJUGADA == 1) {
+            basic.showString("EMPATE")
+        } else if (MIJUGADA == 2) {
+            basic.showString("GANASTE")
         } else {
             basic.showString("PERDISTE")
-            basic.clearScreen()
         }
+        basic.clearScreen()
     }
     if (receivedNumber == 3) {
         if (MIJUGADA == 3) {
             basic.showString("EMPATE")
-            basic.clearScreen()
         } else if (MIJUGADA == 1) {
-            basic.showString("PERDISTE")
-            basic.clearScreen()
-        } else {
             basic.showString("GANASTE")
-            basic.clearScreen()
+        } else {
+            basic.showString("PERDISTE")
         }
+        basic.clearScreen()
     }
 })
 input.onButtonPressed(Button.A, function () {
