@@ -1,6 +1,6 @@
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 1) {
-        if (MIJUGADA == 3) {
+        if (MIJUGADA == 1) {
             basic.showString("EMPATE")
             basic.clearScreen()
         } else if (MIJUGADA == 2) {
