@@ -37,7 +37,7 @@ input.onButtonPressed(Button.A, function () {
         `)
     radio.sendNumber(1)
     MIJUGADA = 1
-    basic.pause(500)
+    basic.pause(1000)
 })
 input.onGesture(Gesture.Shake, function () {
     basic.clearScreen()
@@ -52,7 +52,7 @@ input.onButtonPressed(Button.AB, function () {
         `)
     radio.sendNumber(3)
     MIJUGADA = 3
-    basic.pause(500)
+    basic.pause(1000)
 })
 input.onButtonPressed(Button.B, function () {
     basic.showLeds(`
@@ -64,7 +64,7 @@ input.onButtonPressed(Button.B, function () {
         `)
     radio.sendNumber(2)
     MIJUGADA = 2
-    basic.pause(500)
+    basic.pause(1000)
 })
 let MIJUGADA = 0
 radio.setGroup(220)
