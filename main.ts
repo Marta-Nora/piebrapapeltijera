@@ -1,15 +1,4 @@
 radio.onReceivedNumber(function (receivedNumber) {
-    if (receivedNumber == 2) {
-        if (MIJUGADA == 2) {
-            basic.showString("EMPATE")
-        } else if (MIJUGADA == 1) {
-            basic.showString("PERDISTE")
-        } else if (MIJUGADA == 3) {
-            basic.showString("GANASTE")
-        }
-        basic.clearScreen()
-        MIJUGADA = 0
-    }
     if (receivedNumber == 1) {
         if (MIJUGADA == 1) {
             basic.showString("EMPATE")
@@ -18,10 +7,15 @@ radio.onReceivedNumber(function (receivedNumber) {
         } else if (MIJUGADA == 3) {
             basic.showString("PERDISTE")
         }
-        basic.clearScreen()
-        MIJUGADA = 0
-    }
-    if (receivedNumber == 3) {
+    } else if (receivedNumber == 2) {
+        if (MIJUGADA == 2) {
+            basic.showString("EMPATE")
+        } else if (MIJUGADA == 1) {
+            basic.showString("PERDISTE")
+        } else if (MIJUGADA == 3) {
+            basic.showString("GANASTE")
+        }
+    } else if (receivedNumber == 3) {
         if (MIJUGADA == 3) {
             basic.showString("EMPATE")
         } else if (MIJUGADA == 1) {
@@ -29,9 +23,9 @@ radio.onReceivedNumber(function (receivedNumber) {
         } else if (MIJUGADA == 2) {
             basic.showString("PERDISTE")
         }
-        basic.clearScreen()
-        MIJUGADA = 0
     }
+    basic.clearScreen()
+    MIJUGADA = 0
 })
 input.onButtonPressed(Button.A, function () {
     basic.showLeds(`
